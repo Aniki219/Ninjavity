@@ -60,22 +60,22 @@
 </data>
  </layer>
  <objectgroup id="2" name="Player">
-  <object id="1" template="../ObjectTemplates/Ninja.tx" x="120" y="432"/>
+  <object id="1" template="../ObjectTemplates/Ninja.tx" x="132" y="420"/>
  </objectgroup>
  <objectgroup id="3" name="Switches">
-  <object id="35" template="../ObjectTemplates/Switch.tx" x="636" y="156"/>
+  <object id="35" template="../ObjectTemplates/Switch.tx" x="648" y="120"/>
  </objectgroup>
  <objectgroup id="5" name="Enemies">
-  <object id="40" template="../ObjectTemplates/Electroball.tx" type="Patroller" x="576" y="384">
+  <object id="40" template="../ObjectTemplates/Electroball.tx" type="Patroller" x="588" y="372">
    <properties>
     <property name="direction" value="path"/>
     <property name="path" type="object" value="41"/>
    </properties>
   </object>
   <object id="41" template="../ObjectTemplates/PatrolPath.tx" x="420" y="252"/>
-  <object id="42" template="../ObjectTemplates/Electroball.tx" x="600" y="408"/>
-  <object id="43" template="../ObjectTemplates/Electroball.tx" x="624" y="384"/>
-  <object id="44" template="../ObjectTemplates/Electroball.tx" x="648" y="408"/>
-  <object id="45" template="../ObjectTemplates/Electroball.tx" x="672" y="384"/>
+  <object id="42" template="../ObjectTemplates/Electroball.tx" x="612" y="396"/>
+  <object id="43" template="../ObjectTemplates/Electroball.tx" x="636" y="372"/>
+  <object id="44" template="../ObjectTemplates/Electroball.tx" x="660" y="396"/>
+  <object id="45" template="../ObjectTemplates/Electroball.tx" x="684" y="372"/>
  </objectgroup>
 </map>

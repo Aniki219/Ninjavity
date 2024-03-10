@@ -58,6 +58,9 @@
             "scaleInDock": 1,
             "scaleInEditor": 4
         },
+        "Tilemaps/TemplateTiles.tsx": {
+            "dynamicWrapping": false
+        },
         "Tilemaps/lasers.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 1,
@@ -93,7 +96,7 @@
     "last.externalTilesetPath": "C:/Users/aniki/dev/Ninjavity/Tiled/Tilemaps",
     "last.imagePath": "C:/Users/aniki/dev/Ninjavity/Sprites",
     "last.objectTemplatePath": "C:/Users/aniki/dev/Ninjavity/Assets/Tiled/ObjectTemplates",
-    "last.objectTypesPath": "C:/Users/aniki/dev/Ninjavity/Assets/Tiled/propertytypes.json",
+    "last.objectTypesPath": "C:/Users/aniki/dev/Ninjavity/Assets/Tiled/propertytypes.xml",
     "map.fixedSize": true,
     "map.height": 18,
     "map.lastUsedExportFilter": "JSON map files (*.json)",
