@@ -1,0 +1,91 @@
+{
+    "automappingRulesFile": "",
+    "commands": [
+    ],
+    "compatibilityVersion": 1100,
+    "extensionsPath": "extensions",
+    "folders": [
+        "."
+    ],
+    "properties": [
+    ],
+    "propertyTypes": [
+        {
+            "id": 4,
+            "name": "Direction",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "Up",
+                "Down",
+                "Left",
+                "Right",
+                "Path"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ffff0000",
+            "drawFill": true,
+            "id": 2,
+            "members": [
+                {
+                    "name": "Direction",
+                    "propertyType": "Direction",
+                    "type": "string",
+                    "value": "Up"
+                }
+            ],
+            "name": "Patroller",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object"
+            ]
+        },
+        {
+            "color": "#ff55aa00",
+            "drawFill": true,
+            "id": 8,
+            "members": [
+            ],
+            "name": "PatrolPath",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 6,
+            "members": [
+            ],
+            "name": "Player",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 7,
+            "members": [
+                {
+                    "name": "Door",
+                    "type": "object",
+                    "value": 0
+                }
+            ],
+            "name": "Switch",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object"
+            ]
+        }
+    ]
+}

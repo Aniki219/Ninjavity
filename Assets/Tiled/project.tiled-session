@@ -1,0 +1,139 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Tilemaps/level_0.tmx",
+    "automapping.whileDrawing": false,
+    "console.history": [
+        "map.save",
+        "map",
+        "map.fileName",
+        "map.fileName = \"testmap\"",
+        "map.properties()",
+        "map.properties().foreach(p => console.log(p))",
+        "map.setProperty(\"fileName\", \"testfile\")",
+        "map.fileName",
+        "console.log(map.fileName)",
+        "map.property(\"fileName\")"
+    ],
+    "expandedProjectPaths": [
+    ],
+    "exportAsImage.drawTileGrid": false,
+    "exportAsImage.includeBackgroundColor": false,
+    "exportAsImage.useCurrentScale": true,
+    "exportAsImage.visibleLayersOnly": true,
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        ":/automap-tiles.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "C:/Users/aniki/dev/AtlasOfTheStarryNight/Assets/SuperTiled2Unity/TiledMaps/AltairCanyon/AlicornBasin.tmx": {
+            "scale": 1.225537109375,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 512.0203992190924,
+                "y": 144.01848679230247
+            }
+        },
+        "C:/Users/aniki/dev/AtlasOfTheStarryNight/Assets/SuperTiled2Unity/TiledMaps/AltairCanyon/MidpathScowle.tmx": {
+            "scale": 2.3123263888888888,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 256.2354531120955,
+                "y": 144.22704407237782
+            }
+        },
+        "C:/Users/aniki/dev/AtlasOfTheStarryNight/Assets/SuperTiled2Unity/TiledMaps/Tilesets/16gon.tsx": {
+            "scaleInDock": 1
+        },
+        "TemplateTiles.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
+        "Tilemaps/Objects.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
+        "Tilemaps/lasers.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
+        "Tilemaps/level_0.tmx": {
+            "expandedObjectLayers": [
+                3,
+                5,
+                2
+            ],
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 406.5,
+                "y": 290
+            }
+        },
+        "Tilemaps/rules.tmx": {
+            "scale": 0.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 963,
+                "y": 660
+            }
+        },
+        "WallTilesSheet.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        }
+    },
+    "last.externalTilesetPath": "C:/Users/aniki/dev/Ninjavity/Tiled/Tilemaps",
+    "last.imagePath": "C:/Users/aniki/dev/Ninjavity/Sprites",
+    "last.objectTemplatePath": "C:/Users/aniki/dev/Ninjavity/Assets/Tiled/ObjectTemplates",
+    "last.objectTypesPath": "C:/Users/aniki/dev/Ninjavity/Assets/Tiled/propertytypes.json",
+    "map.fixedSize": true,
+    "map.height": 18,
+    "map.lastUsedExportFilter": "JSON map files (*.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.orientation": 1,
+    "map.renderOrder": null,
+    "map.tileHeight": 24,
+    "map.tileWidth": 24,
+    "map.width": 32,
+    "openFiles": [
+        "Tilemaps/level_0.tmx",
+        "WallTilesSheet.tsx",
+        "TemplateTiles.tsx",
+        "Tilemaps/rules.tmx",
+        "Tilemaps/Objects.tsx",
+        "Tilemaps/lasers.tsx"
+    ],
+    "project": "project.tiled-project",
+    "property.type": "object",
+    "recentFiles": [
+        "Tilemaps/lasers.tsx",
+        "Tilemaps/Objects.tsx",
+        "Tilemaps/rules.tmx",
+        "TemplateTiles.tsx",
+        "WallTilesSheet.tsx",
+        "Tilemaps/level_0.tmx",
+        "C:/Users/aniki/dev/AtlasOfTheStarryNight/Assets/SuperTiled2Unity/TiledMaps/AltairCanyon/AlicornBasin.tmx",
+        "C:/Users/aniki/dev/AtlasOfTheStarryNight/Assets/SuperTiled2Unity/TiledMaps/AltairCanyon/MidpathScowle.tmx"
+    ],
+    "tileset.embedInMap": false,
+    "tileset.lastUsedExportFilter": "All Files (*)",
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.margin": 0,
+    "tileset.spacing": 0,
+    "tileset.tileSize": {
+        "height": 24,
+        "width": 24
+    },
+    "tileset.transparentColor": "#ff00ff",
+    "tileset.type": 0,
+    "tileset.useTransparentColor": false
+}
