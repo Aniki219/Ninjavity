@@ -18,6 +18,7 @@
         "map.property(\"fileName\")"
     ],
     "expandedProjectPaths": [
+        "Tilemaps"
     ],
     "exportAsImage.drawTileGrid": false,
     "exportAsImage.includeBackgroundColor": false,
@@ -59,7 +60,12 @@
             "scaleInEditor": 4
         },
         "Tilemaps/TemplateTiles.tsx": {
-            "dynamicWrapping": false
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "Tilemaps/WallTilesSheet.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
         },
         "Tilemaps/lasers.tsx": {
             "dynamicWrapping": false,
@@ -68,23 +74,23 @@
         },
         "Tilemaps/level_0.tmx": {
             "expandedObjectLayers": [
-                3,
                 5,
-                2
+                2,
+                3
             ],
-            "scale": 1,
-            "selectedLayer": 4,
+            "scale": 1.5,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 406.5,
-                "y": 290
+                "x": 383.66666666666663,
+                "y": 239.99999999999997
             }
         },
         "Tilemaps/rules.tmx": {
             "scale": 0.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 963,
-                "y": 660
+                "x": 361,
+                "y": 780
             }
         },
         "WallTilesSheet.tsx": {
@@ -108,21 +114,19 @@
     "map.width": 32,
     "openFiles": [
         "Tilemaps/level_0.tmx",
-        "WallTilesSheet.tsx",
-        "TemplateTiles.tsx",
         "Tilemaps/rules.tmx",
         "Tilemaps/Objects.tsx",
         "Tilemaps/lasers.tsx"
     ],
     "project": "project.tiled-project",
-    "property.type": "object",
+    "property.type": "bool",
     "recentFiles": [
         "Tilemaps/lasers.tsx",
         "Tilemaps/Objects.tsx",
         "Tilemaps/rules.tmx",
+        "Tilemaps/level_0.tmx",
         "TemplateTiles.tsx",
         "WallTilesSheet.tsx",
-        "Tilemaps/level_0.tmx",
         "C:/Users/aniki/dev/AtlasOfTheStarryNight/Assets/SuperTiled2Unity/TiledMaps/AltairCanyon/AlicornBasin.tmx",
         "C:/Users/aniki/dev/AtlasOfTheStarryNight/Assets/SuperTiled2Unity/TiledMaps/AltairCanyon/MidpathScowle.tmx"
     ],

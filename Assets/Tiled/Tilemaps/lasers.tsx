@@ -2,6 +2,9 @@
 <tileset version="1.10" tiledversion="1.10.2" name="lasers" tilewidth="24" tileheight="24" tilecount="18" columns="6" tilerendersize="grid">
  <image source="../../Sprites/LaserSheet.png" width="144" height="72"/>
  <tile id="0">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="4" y="0" width="17" height="24"/>
+  </objectgroup>
   <animation>
    <frame tileid="0" duration="100"/>
    <frame tileid="1" duration="100"/>
@@ -12,6 +15,9 @@
   </animation>
  </tile>
  <tile id="6">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="4" y="0" width="17" height="24"/>
+  </objectgroup>
   <animation>
    <frame tileid="6" duration="100"/>
    <frame tileid="7" duration="100"/>
@@ -22,6 +28,9 @@
   </animation>
  </tile>
  <tile id="12">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="4" y="0" width="17" height="24"/>
+  </objectgroup>
   <animation>
    <frame tileid="12" duration="100"/>
    <frame tileid="13" duration="100"/>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objecttypes>
  <objecttype name="Patroller" color="#ff0000">
-  <property name="Direction" type="string" propertytype="Direction" default="Up"/>
+  <property name="direction" type="string" propertytype="Direction" default="UP"/>
  </objecttype>
  <objecttype name="PatrolPath" color="#55aa00"/>
  <objecttype name="Player" color="#000000"/>
  <objecttype name="Switch" color="#a0a0a4">
-  <property name="Door" type="object" default="0"/>
+  <property name="door" type="object" default="0"/>
  </objecttype>
 </objecttypes>

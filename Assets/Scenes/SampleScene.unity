@@ -160,7 +160,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.11764707, g: 0.1137255, b: 0.22352943, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -169,15 +169,15 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.12135356
+    y: 0.12698413
+    width: 0.75612605
+    height: 0.74696547
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 8.333333
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -189,7 +189,7 @@ Camera:
   m_HDR: 1
   m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
+  m_ForceIntoRT: 1
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -221,27 +221,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AssetsPPU: 24
-  m_RefResolutionX: 640
+  m_RefResolutionX: 648
   m_RefResolutionY: 400
-  m_UpscaleRT: 0
+  m_UpscaleRT: 1
   m_PixelSnapping: 0
   m_CropFrameX: 1
   m_CropFrameY: 1
   m_StretchFill: 0
---- !u!1001 &773217291
+--- !u!1001 &1156632452
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 2139151813}
     m_Modifications:
     - target: {fileID: 2793960743315115765, guid: a070097528292fb4a913c7f710c75bf2, type: 3}
       propertyPath: m_Name
       value: level_0
       objectReference: {fileID: 0}
+    - target: {fileID: 3959997285884479231, guid: a070097528292fb4a913c7f710c75bf2, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959997285884479231, guid: a070097528292fb4a913c7f710c75bf2, type: 3}
+      propertyPath: gravityLerpTime
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959997285884479231, guid: a070097528292fb4a913c7f710c75bf2, type: 3}
+      propertyPath: gravityMagnitude
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5780143573220099489, guid: a070097528292fb4a913c7f710c75bf2, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5780143573220099489, guid: a070097528292fb4a913c7f710c75bf2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -285,3 +297,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -2695619058785784247, guid: a070097528292fb4a913c7f710c75bf2, type: 3}
+--- !u!4 &2116311616 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5780143573220099489, guid: a070097528292fb4a913c7f710c75bf2, type: 3}
+  m_PrefabInstance: {fileID: 1156632452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2139151812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2139151813}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2139151813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139151812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2116311616}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

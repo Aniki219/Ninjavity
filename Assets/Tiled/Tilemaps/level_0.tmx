@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="left-down" width="32" height="20" tilewidth="24" tileheight="24" infinite="0" backgroundcolor="#2c2635" nextlayerid="6" nextobjectid="46">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="left-down" width="32" height="20" tilewidth="24" tileheight="24" infinite="0" backgroundcolor="#40374d" nextlayerid="6" nextobjectid="47">
  <tileset firstgid="1" source="TemplateTiles.tsx"/>
  <tileset firstgid="11" source="Objects.tsx"/>
  <tileset firstgid="91" source="WallTilesSheet.tsx"/>
@@ -60,22 +60,20 @@
 </data>
  </layer>
  <objectgroup id="2" name="Player">
-  <object id="1" template="../ObjectTemplates/Ninja.tx" x="132" y="420"/>
+  <object id="46" template="../ObjectTemplates/Player.tx" x="132" y="420"/>
  </objectgroup>
  <objectgroup id="3" name="Switches">
-  <object id="35" template="../ObjectTemplates/Switch.tx" x="648" y="120"/>
- </objectgroup>
- <objectgroup id="5" name="Enemies">
-  <object id="40" template="../ObjectTemplates/Electroball.tx" type="Patroller" x="588" y="372">
+  <object id="35" template="../ObjectTemplates/Switch.tx" x="648" y="120">
    <properties>
-    <property name="direction" value="path"/>
-    <property name="path" type="object" value="41"/>
+    <property name="door" type="object" value="46"/>
    </properties>
   </object>
+ </objectgroup>
+ <objectgroup id="5" name="Enemies">
   <object id="41" template="../ObjectTemplates/PatrolPath.tx" x="420" y="252"/>
-  <object id="42" template="../ObjectTemplates/Electroball.tx" x="612" y="396"/>
-  <object id="43" template="../ObjectTemplates/Electroball.tx" x="636" y="372"/>
-  <object id="44" template="../ObjectTemplates/Electroball.tx" x="660" y="396"/>
-  <object id="45" template="../ObjectTemplates/Electroball.tx" x="684" y="372"/>
+  <object id="42" template="../ObjectTemplates/Electroball.tx" x="612" y="372"/>
+  <object id="43" template="../ObjectTemplates/Electroball.tx" x="636" y="348"/>
+  <object id="44" template="../ObjectTemplates/Electroball.tx" x="660" y="324"/>
+  <object id="45" template="../ObjectTemplates/Electroball.tx" x="684" y="300"/>
  </objectgroup>
 </map>

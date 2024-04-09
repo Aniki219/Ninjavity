@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff72ddc2da234e244a8e96eb44e4c03d, type: 3}
   m_Name: ST2U Settings
   m_EditorClassIdentifier: 
-  m_PixelsPerUnit: 100
+  m_PixelsPerUnit: 24
   m_EdgesPerEllipse: 32
   m_AnimationFramerate: 20
   m_DefaultMaterial: {fileID: 0}
   m_MaterialMatchings: []
-  m_ObjectTypesXml: {fileID: 0}
+  m_ObjectTypesXml: {fileID: 4900000, guid: 86bb7918c2f66b349b712c809d78f52f, type: 3}
   m_ParseXmlError: 
   m_CollisionGeometryType: 1
   m_LayerColors:
@@ -53,5 +53,31 @@ MonoBehaviour:
   - {r: 1, g: 0.64705884, b: 0, a: 1}
   - {r: 0, g: 1, b: 1, a: 1}
   - {r: 0.7372549, g: 0.56078434, b: 0.56078434, a: 1}
-  m_CustomObjectTypes: []
-  m_PrefabReplacements: []
+  m_CustomObjectTypes:
+  - m_Name: Patroller
+    m_Color: {r: 1, g: 0, b: 0, a: 1}
+    m_CustomProperties:
+    - m_Name: direction
+      m_Type: string
+      m_Value: UP
+  - m_Name: PatrolPath
+    m_Color: {r: 0.33333334, g: 0.6666667, b: 0, a: 1}
+    m_CustomProperties: []
+  - m_Name: Player
+    m_Color: {r: 0, g: 0, b: 0, a: 1}
+    m_CustomProperties: []
+  - m_Name: Switch
+    m_Color: {r: 0.627451, g: 0.627451, b: 0.6431373, a: 1}
+    m_CustomProperties:
+    - m_Name: door
+      m_Type: object
+      m_Value: 0
+  m_PrefabReplacements:
+  - m_TypeName: Patroller
+    m_Prefab: {fileID: 7367493519776586443, guid: ba9f141919ddec944857b0c164b66e07, type: 3}
+  - m_TypeName: PatrolPath
+    m_Prefab: {fileID: 0}
+  - m_TypeName: Player
+    m_Prefab: {fileID: 8958531637722069794, guid: 3e1f05ac5f937cf41b9657032d45930d, type: 3}
+  - m_TypeName: Switch
+    m_Prefab: {fileID: 5786025640868161658, guid: 3b67d0b77d48d1c4bbd8cf456732d921, type: 3}
