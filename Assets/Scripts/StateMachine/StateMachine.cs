@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,14 +9,15 @@ public abstract class StateMachine : MonoBehaviour {
         EXIT
     }
 
-    public PhaseEnum phase {get; private set;}
+    public PhaseEnum phase {get; protected set;}
 
     public State initialState;
-    private State activeState;
-    private State nextState;
+    protected State activeState;
+    protected State nextState;
 
-    void Start() {
-        activeState = initialState;
+    protected virtual void Start() {
+        ChangeState(initialState);
+        activeState = nextState;
         phase = PhaseEnum.START;
     }
 
@@ -30,6 +32,7 @@ public abstract class StateMachine : MonoBehaviour {
             activeState.behaviors.ForEach(b => b.Update());
         }
         if (phase.Equals(PhaseEnum.START)) {
+            Debug.Log(activeState);
             activeState.behaviors.ForEach(b => b.Start());
             phase = PhaseEnum.UPDATE;
         }   
@@ -41,7 +44,9 @@ public abstract class StateMachine : MonoBehaviour {
     }
 
     public void ChangeState(State state) {
+        Debug.Log("Change state to " + state.GetType().Name);
         nextState = state;
+        nextState.Attach(this);
         phase = PhaseEnum.EXIT;
     }
 }

@@ -1,18 +1,19 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public abstract class State {
-    public List<StateBehavior> behaviors;
-    public List<StateTransition> transitions;
+    public StateMachine stateMachine {get; private set;}
+    public List<StateBehavior> behaviors {get; protected set;}
+    public List<StateTransition> transitions {get; protected set;}
 
-    public virtual void Start() {
-
+    public State() {
+        behaviors = new List<StateBehavior>();
+        transitions = new List<StateTransition>();
     }
 
-    public virtual void Update() {
-
-    }
-
-    public virtual void Exit() {
-
+    public virtual void Attach(StateMachine _stateMachine) {
+        Debug.Log("Attaching State to Behaviors");
+        stateMachine = _stateMachine;
+        behaviors.ForEach(b => b.Attach(this));
     }
 }
