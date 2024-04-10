@@ -23,16 +23,15 @@ public abstract class StateMachine : MonoBehaviour {
 
     void Update() {
         if (phase.Equals(PhaseEnum.UPDATE)) {
+            activeState.behaviors.ForEach(b => b.Update());
             activeState.transitions.ForEach(t => {
                 if (t.checkCondition()) {
                     ChangeState(t.transitionState);
                     return;
                 }
             });
-            activeState.behaviors.ForEach(b => b.Update());
         }
         if (phase.Equals(PhaseEnum.START)) {
-            Debug.Log(activeState);
             activeState.behaviors.ForEach(b => b.Start());
             phase = PhaseEnum.UPDATE;
         }   

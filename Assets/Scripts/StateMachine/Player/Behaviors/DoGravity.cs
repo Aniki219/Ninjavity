@@ -1,14 +1,6 @@
 using UnityEngine;
 
-public class DoGravity : StateBehavior {
-    CharacterController2D cc;
-    PlayerController pc;
-
-    protected override void AttachComponents() {
-        pc = state.stateMachine as PlayerController;
-        cc = pc.cc;
-    }
-
+public class DoGravity : PlayerStateBehavior {
     public override void Update() {
         if (pc.gravity.y < pc.targetGravity.y) {
             pc.gravity += Vector2.up * Time.deltaTime * pc.gravityLerpTime;

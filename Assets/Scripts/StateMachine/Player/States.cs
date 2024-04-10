@@ -1,5 +1,5 @@
 namespace States {
-    public class Grounded : NinjaState {
+    public class Grounded : PlayerState {
         public Grounded():base() {
 
         }

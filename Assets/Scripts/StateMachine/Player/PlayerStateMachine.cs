@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerController : StateMachine
+public class PlayerStateMachine : StateMachine
 {
     public float moveSpeed = 4f;
 

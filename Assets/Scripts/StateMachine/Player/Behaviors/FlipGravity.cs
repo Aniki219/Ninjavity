@@ -1,12 +1,6 @@
 using UnityEngine;
 
-public class FlipGravity : StateBehavior {
-    PlayerController pc;
-
-    protected override void AttachComponents() {
-        pc = state.stateMachine as PlayerController;
-    }
-
+public class FlipGravity : PlayerStateBehavior {
     public override void Update() {
         if (Input.GetKeyDown(KeyCode.UpArrow)) {
             pc.targetGravity = Vector2.up * pc.gravityMagnitude;

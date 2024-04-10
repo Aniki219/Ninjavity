@@ -142,7 +142,7 @@ public class CharacterController2D : MonoBehaviour
 
 	[HideInInspector][NonSerialized]
 	public CharacterCollisionState2D collisionState = new CharacterCollisionState2D();
-	[HideInInspector][NonSerialized]
+	//[HideInInspector][NonSerialized]
 	public Vector2 velocity;
 	public bool isGrounded { get { return collisionState.below; } }
 

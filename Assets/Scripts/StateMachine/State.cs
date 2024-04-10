@@ -12,7 +12,6 @@ public abstract class State {
     }
 
     public virtual void Attach(StateMachine _stateMachine) {
-        Debug.Log("Attaching State to Behaviors");
         stateMachine = _stateMachine;
         behaviors.ForEach(b => b.Attach(this));
     }
