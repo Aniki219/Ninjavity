@@ -1,7 +1,10 @@
 public abstract class StateTransition {
-    public readonly State transitionState;
+    public State state {get; protected set;}
+
+    public void Attach(State _state) {
+        state = _state;
+    }
     
-    public virtual bool checkCondition() {
-        return false;
+    public virtual void checkCondition() {
     }
 }

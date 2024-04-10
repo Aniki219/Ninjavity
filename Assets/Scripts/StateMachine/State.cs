@@ -14,5 +14,6 @@ public abstract class State {
     public virtual void Attach(StateMachine _stateMachine) {
         stateMachine = _stateMachine;
         behaviors.ForEach(b => b.Attach(this));
+        transitions.ForEach(b => b.Attach(this));
     }
 }

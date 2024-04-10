@@ -5,6 +5,7 @@ namespace States {
         public PlayerState() {
             List<StateBehavior> defaultBehaviors = new List<StateBehavior>(){
                 new MoveWithArrows(),
+                new FaceMovementDirection(),
                 new FlipGravity(),
                 new DoGravity(),
             };

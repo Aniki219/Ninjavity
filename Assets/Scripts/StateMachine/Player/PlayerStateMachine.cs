@@ -3,14 +3,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerStateMachine : StateMachine
+public class PlayerStateMachine : EntityStateMachine
 {
     public float moveSpeed = 4f;
-
-    [HideInInspector]
-    public CharacterController2D cc;
-    [HideInInspector]
-    public Animator anim;
 
     public Vector2 gravity;
     public Vector2 targetGravity;
@@ -21,8 +16,6 @@ public class PlayerStateMachine : StateMachine
     // Start is called before the first frame update
     protected override void Start()
     {
-        cc = GetComponent<CharacterController2D>();
-        anim = GetComponent<Animator>();
         targetGravity = Vector2.down * gravityMagnitude;
         initialState = new States.Grounded();
         base.Start();

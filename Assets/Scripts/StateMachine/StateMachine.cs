@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class StateMachine : MonoBehaviour {
@@ -16,22 +15,18 @@ public abstract class StateMachine : MonoBehaviour {
     protected State nextState;
 
     protected virtual void Start() {
-        ChangeState(initialState);
-        activeState = nextState;
+        activeState = initialState;
+        activeState.Attach(this);
         phase = PhaseEnum.START;
     }
 
-    void Update() {
+    protected void Update() {
         if (phase.Equals(PhaseEnum.UPDATE)) {
             activeState.behaviors.ForEach(b => b.Update());
-            activeState.transitions.ForEach(t => {
-                if (t.checkCondition()) {
-                    ChangeState(t.transitionState);
-                    return;
-                }
-            });
+            activeState.transitions.ForEach(t => t.checkCondition());
         }
         if (phase.Equals(PhaseEnum.START)) {
+            OnStartPhase();
             activeState.behaviors.ForEach(b => b.Start());
             phase = PhaseEnum.UPDATE;
         }   
@@ -42,10 +37,32 @@ public abstract class StateMachine : MonoBehaviour {
         }
     }
 
-    public void ChangeState(State state) {
-        Debug.Log("Change state to " + state.GetType().Name);
-        nextState = state;
+    public void ChangeState<T>() where T : State {
+        nextState = (T) Activator.CreateInstance(typeof(T));
         nextState.Attach(this);
         phase = PhaseEnum.EXIT;
+    }
+
+    protected virtual void OnStartPhase() {
+
+    }
+}
+
+public abstract class EntityStateMachine : StateMachine {
+    [HideInInspector]
+    public CharacterController2D cc;
+    [HideInInspector]
+    public Animator anim;
+    [HideInInspector]
+    public SpriteRenderer sprite;
+    
+    private void Awake() {
+        cc = GetComponent<CharacterController2D>();
+        anim = GetComponentInChildren<Animator>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
+    }
+
+    protected override void OnStartPhase() {
+        anim.Play(activeState.GetType().Name);
     }
 }
