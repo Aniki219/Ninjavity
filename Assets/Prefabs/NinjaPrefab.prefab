@@ -74,12 +74,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 416968948, guid: c2c49220b3aa16e4f9ca843964eb6b0e, type: 3}
+  m_Sprite: {fileID: -5581950685352881276, guid: 79d108b0942409842aaf80417e72c5c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.24, y: 0.24}
+  m_Size: {x: 0.875, y: 0.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -117,8 +117,8 @@ GameObject:
   - component: {fileID: 1636306345778832841}
   - component: {fileID: 882667173}
   - component: {fileID: 882667174}
-  - component: {fileID: 882667172}
-  - component: {fileID: 2137781758392717913}
+  - component: {fileID: 8763255435974122738}
+  - component: {fileID: 7153097535857724859}
   m_Layer: 0
   m_Name: NinjaPrefab
   m_TagString: Untagged
@@ -189,7 +189,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.8}
   m_EdgeRadius: 0
---- !u!114 &882667172
+--- !u!114 &8763255435974122738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8958531637722069794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07038d620a72aa747badc90c9bd83533, type: 3}
+  m_Script: {fileID: 11500000, guid: d48135dc04112964491948cc25e13572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreOneWayPlatformsThisFrame: 0
@@ -250,7 +250,7 @@ MonoBehaviour:
   totalHorizontalRays: 8
   totalVerticalRays: 4
   velocity: {x: 0, y: 0}
---- !u!114 &2137781758392717913
+--- !u!114 &7153097535857724859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,12 +259,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8958531637722069794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f02edc3f769564f48ab41d7a111ab738, type: 3}
+  m_Script: {fileID: 11500000, guid: 6abdb0fac237d1d4ab7f43a805d20988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
   cc: {fileID: 0}
   anim: {fileID: 0}
+  sprite: {fileID: 0}
+  moveSpeed: 6
   gravity: {x: 0, y: 0}
   targetGravity: {x: 0, y: 0}
   gravityLerpTime: 50
