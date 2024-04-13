@@ -6,6 +6,8 @@ public abstract class State {
     public List<StateBehavior> behaviors {get; protected set;}
     public List<StateTransition> transitions {get; protected set;}
 
+    public string animationStateOverride {get; protected set;}
+
     public State() {
         behaviors = new List<StateBehavior>();
         transitions = new List<StateTransition>();

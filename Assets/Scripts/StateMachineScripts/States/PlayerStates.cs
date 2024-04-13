@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace States
 {
@@ -35,15 +36,31 @@ namespace States
         public Airborne():base() {
             transitions = new List<StateTransition>() {
                 new CanFlip(),
+                new CanLand()
             };
         }
     }
 
-    public class Flip : PlayerState {
+    public abstract class Flip : PlayerState {
         public Flip():base() {
+            animationStateOverride = "Flip";
+            
             transitions = new List<StateTransition>() {
-                new OnAnimationEnd<Airborne>()
-            };
+                new OnAnimationEnd<Airborne>(),
+                new CanLand(),
+            };            
+        }
+    }
+    
+    public class FlipUp : Flip {
+        public FlipUp() : base() {
+            behaviors.Add(new FlipGravity(Vector2.up));
+        }
+    }
+
+    public class FlipDown : Flip {
+        public FlipDown() : base() {
+            behaviors.Add(new FlipGravity(Vector2.down));
         }
     }
 }

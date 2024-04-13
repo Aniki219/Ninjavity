@@ -20,30 +20,40 @@ public abstract class StateMachine : MonoBehaviour {
         phase = PhaseEnum.START;
     }
 
-    protected void Update() {
-        if (phase.Equals(PhaseEnum.UPDATE)) {
-            activeState.behaviors.ForEach(b => b.Update());
-            activeState.transitions.ForEach(t => t.checkCondition());
-        }
-        if (phase.Equals(PhaseEnum.START)) {
-            OnStartPhase();
-            activeState.behaviors.ForEach(b => b.Start());
-            phase = PhaseEnum.UPDATE;
-        }   
-        if (phase.Equals(PhaseEnum.EXIT)) {
-            activeState.behaviors.ForEach(b => b.Exit());
-            activeState = nextState;
-            phase = PhaseEnum.START;
+    protected virtual void Update() {
+        switch(phase) {
+            case PhaseEnum.START:
+                OnStateStart();
+                break;
+            case PhaseEnum.UPDATE:
+                OnStateUpdate();
+                break;
+            case PhaseEnum.EXIT:
+                OnStateExit();
+                break;
         }
     }
 
     public void ChangeState<T>() where T : State {
         nextState = (T) Activator.CreateInstance(typeof(T));
         nextState.Attach(this);
+        Debug.Log((this as PlayerStateMachine).cc.collisionState.below);
         phase = PhaseEnum.EXIT;
     }
 
-    protected virtual void OnStartPhase() {
+    protected virtual void OnStateStart() {
+        activeState.behaviors.ForEach(b => b.Start());
+        phase = PhaseEnum.UPDATE;
+    }
 
+    protected virtual void OnStateUpdate() {
+        activeState.behaviors.ForEach(b => b.Update());
+        activeState.transitions.ForEach(t => t.checkCondition());
+    }
+
+    protected virtual void OnStateExit() {
+        activeState.behaviors.ForEach(b => b.Exit());
+        activeState = nextState;
+        phase = PhaseEnum.START; 
     }
 }

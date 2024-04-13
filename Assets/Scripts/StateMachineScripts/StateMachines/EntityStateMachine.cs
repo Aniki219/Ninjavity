@@ -14,7 +14,17 @@ public abstract class EntityStateMachine : StateMachine {
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
-    protected override void OnStartPhase() {
-        anim.Play(activeState.GetType().Name);
+    protected override void OnStateStart()
+    {
+        SetAnimationState();
+        base.OnStateStart();
+    }
+
+    protected void SetAnimationState() {
+        string stateName = activeState.GetType().Name;
+        if (activeState.animationStateOverride != null) {
+            stateName = activeState.animationStateOverride;
+        }
+        anim.Play(stateName);
     }
 }

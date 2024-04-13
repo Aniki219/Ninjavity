@@ -1,18 +1,18 @@
 using States;
 using UnityEngine;
 
-public class CanRun : StateTransition {
+public class CanRun : PlayerTransition {
     public override void checkCondition() {
-        if (!Mathf.Approximately((state.stateMachine as PlayerStateMachine).cc.velocity.x, 0)) {
-            state.stateMachine.ChangeState<Run>();
+        if (!Mathf.Approximately(cc.velocity.x, 0)) {
+            pc.ChangeState<Run>();
         }
     }
 }
 
-public class CanIdle : StateTransition {
+public class CanIdle : PlayerTransition {
     public override void checkCondition() {
-        if (Mathf.Approximately((state.stateMachine as PlayerStateMachine).cc.velocity.x, 0)) {
-            state.stateMachine.ChangeState<Grounded>();
+        if (Mathf.Approximately(cc.velocity.x, 0)) {
+            pc.ChangeState<Grounded>();
         }
     }
 }

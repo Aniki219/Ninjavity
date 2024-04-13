@@ -1,12 +1,15 @@
+using States;
 using UnityEngine;
 
 public class FlipGravity : PlayerStateBehavior {
-    public override void Update() {
-        if (Input.GetKeyDown(KeyCode.UpArrow)) {
-            pc.targetGravity = Vector2.up * pc.gravityMagnitude;
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow)) {
-            pc.targetGravity = Vector2.down * pc.gravityMagnitude;
-        }
+    private readonly Vector2 flipDirection;
+
+    public FlipGravity(Vector2 _flipDirection):base() {
+        flipDirection = _flipDirection;
+    }
+
+    public override void Start() {
+        pc.targetGravity = flipDirection * pc.gravityMagnitude;
+        pc.sprite.flipY = flipDirection.y >= 0;
     }
 }

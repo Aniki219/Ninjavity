@@ -1,10 +1,10 @@
 using States;
 using UnityEngine;
 
-public class CanBecomeAirborn : StateTransition {
+public class CanBecomeAirborn : PlayerTransition {
     public override void checkCondition() {
-        if (!(state.stateMachine as PlayerStateMachine).IsGrounded()) {
-            state.stateMachine.ChangeState<Airborne>();
+        if (!pc.IsGrounded()) {
+            pc.ChangeState<Airborne>();
         }
     }
 }
